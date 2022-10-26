@@ -1,4 +1,4 @@
-import logo from './goblin-sam.png';
+import logo from './goblin-sam-transparent.png';
 import './App.css';
 
 function App() {
