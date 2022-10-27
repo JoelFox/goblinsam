@@ -1,7 +1,6 @@
 import logo from "./goblin-sam-transparent.png";
 import "./App.css";
 import Countdown from 'react-countdown';
-import { useEffect } from "react";
 
 function App() {
   
