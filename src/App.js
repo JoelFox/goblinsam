@@ -13,7 +13,7 @@ function App() {
         <h1>:goblin-sam:</h1>
 
         <img src={logo} className="App-logo" alt="logo" />
-        {date && <><h4>GOBLIN TIME: </h4><Countdown date={ date } /></> }
+        {date && <><h4>GOBLIN MODE: <Countdown date={ date } /></h4></> }
         <label htmlFor="newsletter">Register to our newsletter</label>
         <input type="text" placeholder="Your e-mail"></input>
         <input type="submit" value="Submit"/>
