@@ -14,6 +14,16 @@
   }
 }
 
+.goblinModeReverse {
+  animation: App-logo-spin2 infinite 3s linear;
+}
+.goblinMode {
+  animation: App-logo-spin infinite 2s linear;
+}
+.goblinModeFast {
+  animation: App-logo-spin infinite 1s linear;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -39,6 +49,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes App-logo-spin2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }
 

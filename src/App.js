@@ -7,24 +7,24 @@ import { useState } from 'react';
 function App() {
   
   const d = new Date();
-  const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 17, 0, 0);
-  // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
+  // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 17, 0, 0);
+  const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
   const [logo, setLogo] = useState(standardLogo);
-  const [goblinMode, setGoblinMode] = useState("");
+  const [goblinMode, setGoblinMode] = useState(false);
 
   const onGoblinMode = () => {
     setLogo(goblinModeLogo);
-    setGoblinMode("GOBLIN-MODE")
+    setGoblinMode(true)
   }
 
   return (
-    <div className="App">
-      <header className={`App-header ${goblinMode}`}>
-        <h1>:goblin-sam:</h1>
+    <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
+      <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
+        <h1 class={goblinMode ? "goblinModeFast" : ""}>:goblin-sam:</h1>
 
         <img src={logo} className="App-logo" alt="logo" />
-        {date && <><h4>GOBLIN MODE: <Countdown date={ date } onComplete={onGoblinMode} /></h4></> }
+        {date && <><h4 className={goblinMode ? "goblinMode" : ""}>GOBLIN MODE: <Countdown date={ date } onComplete={onGoblinMode} /></h4></> }
         <label htmlFor="newsletter">Register to our newsletter</label>
         <input type="text" placeholder="Your e-mail"></input>
         <input type="submit" value="Submit"/>
