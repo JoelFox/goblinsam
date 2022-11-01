@@ -11,8 +11,13 @@ body {
   pointer-events: none;
   display: inline-block;
 }
+.App-logo-goblin {
+  height: 100px;
+  pointer-events: none;
+  display: inline-block;
+}
 
-.App-logo {
+.App-logo, .App-logo-goblin {
   animation: App-logo-spin infinite 1s linear;
 }
 
