@@ -8,10 +8,8 @@
   display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 1s linear;
-  }
+.App-logo {
+  animation: App-logo-spin infinite 1s linear;
 }
 
 .goblinModeReverse {
@@ -60,10 +58,20 @@
   }
 }
 
-@keyframes blinkingBackground{
-  0%		{ background-color: #10c018;}
-  25%		{ background-color: #1056c0;}
-  50%		{ background-color: #ef0a1a;}
-  75%		{ background-color: #254878;}
-  100%	        { background-color: #04a1d5;}
+@keyframes blinkingBackground {
+  0% {
+    background-color: #10c018;
+  }
+  25% {
+    background-color: #1056c0;
+  }
+  50% {
+    background-color: #ef0a1a;
+  }
+  75% {
+    background-color: #254878;
+  }
+  100% {
+    background-color: #04a1d5;
+  }
 }

@@ -21,7 +21,7 @@ function App() {
   return (
     <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
       <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
-        <h1 class={goblinMode ? "goblinModeFast" : ""}>:goblin-sam:</h1>
+        <h1 class={goblinMode ? "goblinModeFast" : ""}>{goblinMode ? "GOBLIN MODE" : ":goblin-sam:"}</h1>
 
         <img src={logo} className="App-logo" alt="logo" />
         {date && <><h4 className={goblinMode ? "goblinMode" : ""}>GOBLIN MODE: <Countdown date={ date } onComplete={onGoblinMode} /></h4></> }
