@@ -7,7 +7,7 @@ import { useState } from 'react';
 function App() {
   
   const d = new Date();
-  const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 17, 0, 0);
+  const date = new Date(d.getFullYear(), d.getMonth(), d.getHours() >= 17 ? d.getDate() + 1 : d.getDate(), 17, 0, 0);
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
   const [logo, setLogo] = useState(standardLogo);
