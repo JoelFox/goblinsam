@@ -3,6 +3,7 @@ import goblinModeLogo from "./goblin-sam-anime.gif";
 import "./App.css";
 import Countdown from "react-countdown";
 import { useState } from "react";
+import Snowfall from "react-snowfall";
 
 function App() {
   const d = new Date();
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
+      <Snowfall />
       <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
         <h1 class={goblinMode ? "goblinModeFast" : ""}>
           {goblinMode ? "GOBLIN MODE" : ":goblin-sam:"}
