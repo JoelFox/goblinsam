@@ -19,6 +19,10 @@ function App() {
 
   const [logo, setLogo] = useState(standardLogo);
   const [goblinMode, setGoblinMode] = useState(false);
+  const snowflake1 = document.createElement('img')
+  snowflake1.src = './goblin-sam-transparent.png'
+
+  const snowFallImages = [snowflake1];
 
   const onGoblinMode = () => {
     setLogo(goblinModeLogo);
@@ -27,9 +31,9 @@ function App() {
 
   return (
     <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
-      <Snowfall />
+      <Snowfall images={goblinMode ? snowFallImages : []}/>
       <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
-        <h1 class={goblinMode ? "goblinModeFast" : ""}>
+        <h1 className={goblinMode ? "goblinModeFast" : ""}>
           {goblinMode ? "GOBLIN MODE" : ":goblin-sam:"}
         </h1>
         <div>
