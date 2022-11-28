@@ -19,8 +19,8 @@ function App() {
 
   const [logo, setLogo] = useState(standardLogo);
   const [goblinMode, setGoblinMode] = useState(false);
-  const snowflake1 = document.createElement('img')
-  snowflake1.src = './goblin-sam-transparent.png'
+  const snowflake1 = document.createElement("img");
+  snowflake1.src = "./goblin-sam-transparent.png";
 
   const snowFallImages = [snowflake1];
 
@@ -30,40 +30,44 @@ function App() {
   };
 
   return (
-    <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
-      <Snowfall images={goblinMode ? snowFallImages : []}/>
-      <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
-        <h1 className={goblinMode ? "goblinModeFast" : ""}>
-          {goblinMode ? "GOBLIN MODE" : ":goblin-sam:"}
-        </h1>
-        <div>
-          {goblinMode && (
-            <>
-              <img src={logo} className="App-logo-goblin" alt="logo" />
-              <img src={logo} className="App-logo-goblin" alt="logo" />
-            </>
-          )}
-          <img src={logo} className="App-logo" alt="logo" />
-          {goblinMode && (
-            <>
-              <img src={logo} className="App-logo-goblin" alt="logo" />
-              <img src={logo} className="App-logo-goblin" alt="logo" />
-            </>
-          )}
-        </div>
+    <>
 
-        {date && (
-          <>
-            <h4 className={goblinMode ? "goblinMode" : ""}>
-              GOBLIN MODE: <Countdown date={date} onComplete={onGoblinMode} />
-            </h4>
-          </>
-        )}
-        <label htmlFor="newsletter">Register to our newsletter</label>
-        <input type="text" placeholder="Your e-mail"></input>
-        <input type="submit" value="Submit" />
-      </header>
-    </div>
+      <div className={`App ${goblinMode ? "goblinModeReverse" : ""}`}>
+        <header className={`App-header ${goblinMode ? "GOBLIN-MODE" : ""}`}>
+          <h1 className={goblinMode ? "goblinModeFast" : ""}>
+            {goblinMode ? "GOBLIN MODE" : ":goblin-sam:"}
+          </h1>
+          <div>
+            {goblinMode && (
+              <>
+                <img src={logo} className="App-logo-goblin" alt="logo" />
+                <img src={logo} className="App-logo-goblin" alt="logo" />
+              </>
+            )}
+            <img src={logo} className="App-logo" alt="logo" />
+            {goblinMode && (
+              <>
+                <img src={logo} className="App-logo-goblin" alt="logo" />
+                <img src={logo} className="App-logo-goblin" alt="logo" />
+              </>
+            )}
+          </div>
+
+          {date && (
+            <>
+              <h4 className={goblinMode ? "goblinMode" : ""}>
+                GOBLIN MODE: <Countdown date={date} onComplete={onGoblinMode} />
+              </h4>
+            </>
+          )}
+          <label htmlFor="newsletter">Register to our newsletter</label>
+          <input type="text" placeholder="Your e-mail"></input>
+          <input type="submit" value="Submit" />
+        </header>
+      </div>
+      <Snowfall images={goblinMode ? snowFallImages : []} radius={goblinMode ? [15, 30] : [3,7]} />
+
+    </>
   );
 }
 
