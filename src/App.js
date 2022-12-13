@@ -1,5 +1,7 @@
 import standardLogo from "./goblin-sam-transparent.png";
 import goblinModeLogo from "./goblin-sam-anime.gif";
+import luciaLogo from "./goblin-sam-lucia.png";
+
 import "./App.css";
 import Countdown from "react-countdown";
 import { useState } from "react";
@@ -17,10 +19,10 @@ function App() {
   );
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
-  const [logo, setLogo] = useState(standardLogo);
+  const [logo, setLogo] = useState(luciaLogo);
   const [goblinMode, setGoblinMode] = useState(false);
   const snowflake1 = document.createElement("img");
-  snowflake1.src = "./goblin-sam-transparent.png";
+  snowflake1.src = "./goblin-sam-lucia.png";
 
   const snowFallImages = [snowflake1];
 
