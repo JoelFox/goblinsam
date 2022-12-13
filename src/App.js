@@ -1,4 +1,4 @@
-import standardLogo from "./goblin-sam-transparent.png";
+// import standardLogo from "./goblin-sam-transparent.png";
 import goblinModeLogo from "./goblin-sam-anime.gif";
 import luciaLogo from "./goblin-sam-lucia.png";
 
