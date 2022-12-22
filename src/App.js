@@ -17,8 +17,8 @@ function App() {
     d.getFullYear(),
     d.getMonth(),
     d.getHours() >= 17 ? d.getDate() + 1 : d.getDate(),
-    15,
-    30,
+    17,
+    0,
     0
   );
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
