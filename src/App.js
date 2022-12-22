@@ -23,7 +23,7 @@ function App() {
   );
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
-  const [logo, setLogo] = useState(santaLogo);
+  const [logo] = useState(santaLogo);
   const [goblinMode, setGoblinMode] = useState(false);
   const snowflake1 = document.createElement("img");
   snowflake1.src = "./goblin-sam-santa.png";
