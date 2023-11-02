@@ -1,6 +1,8 @@
 import standardLogo from "./goblin-sam-transparent.png";
 import goblinModeLogo from "./goblin-sam-anime.gif";
-// import luciaLogo from "./goblin-sam-lucia.png";
+import Snowfall from "react-snowfall";
+import luciaLogo from "./goblin-sam-lucia.png";
+
 // import santaLogo from "./goblin-sam-santa.png";
 // import reindeerLogo from "./goblin-sam-reindeer.png";
 // import audio from "./jingle-bells-8bit.mp3";
@@ -21,6 +23,11 @@ function App() {
     0,
     0
   );
+
+  const isDecember = d.getMonth() == 11;
+  console.log(d.getMonth());
+  const isLucia = isDecember && d.getDate() == 12;
+  console.log(d.getDate());
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
   const [logo, setLogo] = useState(standardLogo);
@@ -44,7 +51,7 @@ function App() {
           </h1>
 
           <div>
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={isLucia ? luciaLogo : logo} className="App-logo" alt="logo" />
           </div>
           {date && (
             <>
@@ -58,10 +65,9 @@ function App() {
           <input type="submit" value="Submit" />
         </header>
       </div>
-      {/* <Snowfall
-        images={goblinMode ? snowFallImages : []}
+      {isDecember && <Snowfall
         radius={goblinMode ? [15, 30] : [3, 7]}
-      /> */}
+      />}
     </>
   );
 }
