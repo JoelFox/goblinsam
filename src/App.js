@@ -26,7 +26,7 @@ function App() {
 
   const isDecember = d.getMonth() === 11;
   console.log(d.getMonth());
-  const isLucia = isDecember && d.getDate() === 12;
+  const isLucia = isDecember && d.getDate() === 13;
   console.log(d.getDate());
   // const date = new Date(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds() + 10);
 
